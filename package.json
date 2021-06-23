@@ -1,5 +1,5 @@
 {
-  "name": "comp229-m2021-midterm-typescript",
+  "name": "comp229-m2021-midterm-301095037",
   "version": "0.0.3",
   "private": true,
   "scripts": {
@@ -24,7 +24,7 @@
     "passport-local-mongoose": "^6.1.0",
     "popper.js": "^1.16.1"
   },
-  "description": "## Welcome to the MidTerm Project - the Favourite Book List App",
+  "description": "MID TERM M2021 PROJECT",
   "main": "server.js",
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
@@ -46,14 +46,14 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/rampagercp/midterm_comp229"
   },
   "keywords": [
     "NodeJS",
     "ExpressJS",
     "EJS"
   ],
-  "author": "Your Name Goes Here",
+  "author": "RODRIGO PACHECO",
   "license": "ISC",
   "bugs": {
     "url": ""
