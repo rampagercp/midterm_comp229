@@ -75,18 +75,47 @@ router.get('/edit/:id', (req, res, next) => {
 // POST - process the information passed from the details form and update the document
 router.post('/edit/:id', (req, res, next) => {
 
-    /*****************
-     * ADD CODE HERE *      
-     *****************/
+  let id = req.params.id;
 
+  // instantiate a new Clothing Item
+  let updatedBookItem = new book
+  ({
+    "_id": id,
+    "Title": req.body.title,
+    "Description": req.body.description,
+    "Price": req.body.price,
+    "Author": req.body.author, 
+    "Genre": req.body.genre
+  });
+
+  // find the clothing item via db.clothing.update({"_id":id}) and then update
+  book.updateOne({_id: id}, updatedBookItem, {}, (err) =>{
+    if(err)
+    {
+      console.error(err);
+      res.end(err);
+    }
+
+    res.redirect('/books');
+  });
 });
 
-// GET - process the delete by user id
+
 router.get('/delete/:id', (req, res, next) => {
 
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+  let id = req.params.id;
+
+
+  book.remove({_id: id}, (err) => {
+    if(err)
+    {
+      console.error(err);
+      res.end(err);
+    }
+
+    res.redirect('/books');
+  });
+
 });
 
 
