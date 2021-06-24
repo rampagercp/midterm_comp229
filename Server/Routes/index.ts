@@ -9,12 +9,7 @@ import mongoose from 'mongoose';
 import book from '../Models/books';
 
 /* GET home page. wildcard */
-router.get('/', (req, res, next) => {
-  res.render('content/index', {
-    title: 'Home',
-    page: 'home',
-    books: ''
-   });
+router.get('/', (req, res, next) => {res.render('content/index', {title: 'Home', page: 'home', books: ''});
 });
 
 //module.exports = router;
