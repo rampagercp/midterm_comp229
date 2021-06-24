@@ -42,12 +42,12 @@ router.post('/add', (req, res, next) => {
 });
 router.get('/edit/:id', (req, res, next) => {
     let id = req.params.id;
-    books_1.default.findById(id, {}, {}, (err, bookItemToEdit) => {
+    books_1.default.findById(id, {}, {}, (err, books) => {
         if (err) {
             console.error(err);
             res.end(err);
         }
-        res.render('books/details', { title: 'Edit', page: 'details', item: bookItemToEdit });
+        res.render('books/details', { title: 'Edit', page: 'details', books: books });
     });
 });
 router.post('/edit/:id', (req, res, next) => {

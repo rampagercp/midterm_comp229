@@ -60,14 +60,14 @@ router.get('/edit/:id', (req, res, next) => {
 
   let id = req.params.id;
 
-  book.findById(id, {}, {}, (err, bookItemToEdit) => {
+  book.findById(id, {}, {}, (err, books) => {
 
       if (err) {
           console.error(err)
           res.end(err)
       }
       //show the edit view
-      res.render('books/details', { title: 'Edit', page: 'details', item: bookItemToEdit });
+      res.render('books/details', { title: 'Edit', page: 'details', books: books });
 
   });
 });
